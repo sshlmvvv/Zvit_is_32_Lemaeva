@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="uk">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,7 +69,7 @@
                 <div id="lab2-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №2</div>
                 <div id="lab2-conclusions" class="hidden">Висновки по лабораторній роботі №2</div>
             </div>
-
+            
             <div id="lab3-content" class="hidden">
                 <div id="lab3-description" class="hidden">Опис предметного середовища для лабораторної роботи №3</div>
                 <div id="lab3-topic" class="hidden">Тема та мета лабораторної роботи №3</div>
@@ -80,7 +79,7 @@
                 <div id="lab3-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №3</div>
                 <div id="lab3-conclusions" class="hidden">Висновки по лабораторній роботі №3</div>
             </div>
-
+            
             <div id="lab4-content" class="hidden">
                 <div id="lab4-description" class="hidden">Опис предметного середовища для лабораторної роботи №4</div>
                 <div id="lab4-topic" class="hidden">Тема та мета лабораторної роботи №4</div>
@@ -90,7 +89,7 @@
                 <div id="lab4-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №4</div>
                 <div id="lab4-conclusions" class="hidden">Висновки по лабораторній роботі №4</div>
             </div>
-
+            
             <div id="lab5-content" class="hidden">
                 <div id="lab5-description" class="hidden">Опис предметного середовища для лабораторної роботи №5</div>
                 <div id="lab5-topic" class="hidden">Тема та мета лабораторної роботи №5</div>
@@ -100,7 +99,7 @@
                 <div id="lab5-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №5</div>
                 <div id="lab5-conclusions" class="hidden">Висновки по лабораторній роботі №5</div>
             </div>
-
+            
             <div id="lab6-content" class="hidden">
                 <div id="lab6-description" class="hidden">Опис предметного середовища для лабораторної роботи №6</div>
                 <div id="lab6-topic" class="hidden">Тема та мета лабораторної роботи №6</div>
@@ -119,7 +118,7 @@
                 <div id="lab7-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №7</div>
                 <div id="lab7-conclusions" class="hidden">Висновки по лабораторній роботі №7</div>
             </div>
-
+            
             <div id="lab8-content" class="hidden">
                 <div id="lab8-description" class="hidden">Опис предметного середовища для лабораторної роботи №8</div>
                 <div id="lab8-topic" class="hidden">Тема та мета лабораторної роботи №8</div>
@@ -129,7 +128,7 @@
                 <div id="lab8-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №8</div>
                 <div id="lab8-conclusions" class="hidden">Висновки по лабораторній роботі №8</div>
             </div>
-
+            
             <div id="lab9-content" class="hidden">
                 <div id="lab9-description" class="hidden">Опис предметного середовища для лабораторної роботи №9</div>
                 <div id="lab9-topic" class="hidden">Тема та мета лабораторної роботи №9</div>
@@ -139,57 +138,56 @@
                 <div id="lab9-htmlImages" class="hidden">HTML-код зображень для лабораторної роботи №9</div>
                 <div id="lab9-conclusions" class="hidden">Висновки по лабораторній роботі №9</div>
             </div>
+            
+            </div>
+            </div>
+            
+            <script>
+                function showLab(labId) {
+                    let labs = document.querySelectorAll('.content > div');
+                    labs.forEach(lab => lab.classList.add('hidden'));
+                    document.getElementById(labId + '-content').classList.remove('hidden');
 
-        </div>
-    </div>
+                    resetSections(labId);
+                }
 
-    <script>
-        function showLab(labId) {
-            let labs = document.querySelectorAll('.content > div');
-            labs.forEach(lab => lab.classList.add('hidden'));
-            document.getElementById(labId + '-content').classList.remove('hidden');
+                function showSection(section) {
+                    let currentLab = document.querySelector('.content > div:not(.hidden)').id.split('-')[0];
+                    let sections = document.querySelectorAll('#' + currentLab + '-content > div');
+                    sections.forEach(section => section.classList.add('hidden'));
+                    document.getElementById(currentLab + '-' + section).classList.remove('hidden');
+                }
 
-            resetSections(labId);
-        }
+                function resetSections(labId) {
+                    let sections = document.querySelectorAll('#' + labId + '-content > div');
+                    sections.forEach(section => section.classList.add('hidden'));
+                    document.getElementById(labId + '-description').classList.remove('hidden');
+                }
 
-        function showSection(section) {
-            let currentLab = document.querySelector('.content > div:not(.hidden)').id.split('-')[0];
-            let sections = document.querySelectorAll('#' + currentLab + '-content > div');
-            sections.forEach(section => section.classList.add('hidden'));
-            document.getElementById(currentLab + '-' + section).classList.remove('hidden');
-        }
+                function activateButton(button, contentId) {
+                    var buttons = document.querySelectorAll('.button');
+                    buttons.forEach(function (btn) {
+                        btn.classList.remove('active');
+                    });
 
-        function resetSections(labId) {
-            let sections = document.querySelectorAll('#' + labId + '-content > div');
-            sections.forEach(section => section.classList.add('hidden'));
-            document.getElementById(labId + '-description').classList.remove('hidden');
-        }
+                    button.classList.add('active');
 
-        function activateButton(button, contentId) {
-            var buttons = document.querySelectorAll('.button');
-            buttons.forEach(function (btn) {
-                btn.classList.remove('active');
-            });
+                    var contents = document.querySelectorAll('[id^="lab"]');
+                    contents.forEach(function (content) {
+                        content.classList.add('hidden');
+                    });
 
-            button.classList.add('active');
+                    document.getElementById(contentId).classList.remove('hidden');
+                }
+                function activeButton(button) {
+                        var buttons = document.querySelectorAll('.sidebar button');
+                        buttons.forEach(function (btn) {
+                            btn.classList.remove('active');
+                        });
+                        button.classList.add('active');
 
-            var contents = document.querySelectorAll('[id^="lab"]');
-            contents.forEach(function (content) {
-                content.classList.add('hidden');
-            });
-
-            document.getElementById(contentId).classList.remove('hidden');
-        }
-        function activeButton(button) {
-            var buttons = document.querySelectorAll('.sidebar button');
-            buttons.forEach(function (btn) {
-                btn.classList.remove('active');
-            });
-            button.classList.add('active');
-
-        }
-    </script>
-
-</body>
-
+                    }
+                </script>
+    
+    </body>
 </html>

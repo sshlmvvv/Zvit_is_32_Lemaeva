@@ -1,0 +1,123 @@
+body {
+    font-family: 'Montserrat', 'Poiret One', 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    margin: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sidebar .button {
+    background-color: #b9b9b9;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar .button:hover {
+    background-color: #716e6ef7;
+}
+
+.sidebar .button.active {
+    background-color: #4c00ff;
+    color: rgb(255, 255, 255);
+}
+
+.content {
+    width: 75%;
+    padding: 20px;
+    border-left: 2px solid #050505;
+}
+
+.hidden {
+    display: none;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nav-buttons .button {
+    background-color: #09f574;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-buttons .button:hover {
+    background-color: #c9ff07;
+}
+
+.nav-buttons .button.active {
+    background-color: #4c00ff;
+}
+
+#lab1-content,
+#lab2-content,
+#lab3-content,
+#lab4-content,
+#lab5-content,
+#lab6-content,
+#lab7-content,
+#lab8-content,
+#lab9-content {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+.dist {
+    margin-left: 20px;
+    font-style: italic;
+}
