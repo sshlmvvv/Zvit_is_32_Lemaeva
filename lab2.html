@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poiret+One&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet" />
+    <script>
+        function showContent(content) {
+            document.getElementById('output').innerHTML = content;
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+            <h2>З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ ТА ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ"</h2>
+            <h3>Студентки групи ІС-32 Лємаєвої Олександри</h3>
+            <img src="./images/DSC07095.JPG" alt="Фото студента" class="photo">
+        </div>
+    </header>
+
+    <main>
+        <div class="nav-buttons">
+            <a href="lab1.html">Лабораторна робота №1</a>
+            <a href="lab2.html">Лабораторна робота №2</a>
+            <a href="lab3.html">Лабораторна робота №3</a>
+            <a href="lab4.html">Лабораторна робота №4</a>
+            <a href="lab5.html">Лабораторна робота №5</a>
+            <a href="lab6.html">Лабораторна робота №6</a>
+            <a href="lab7.html">Лабораторна робота №7</a>
+            <a href="lab8.html">Лабораторна робота №8</a>
+            <a href="lab9.html">Лабораторна робота №9</a>
+        </div>
+
+        <div class="container">
+            <div class="sidebar">
+                <button
+                    onclick="showContent('<strong>Тема, мета ЛР №2:</strong> <br> Тема та мета для лабораторної роботи №2, місце розташування сайту.')">Тема,
+                    мета ЛР №2 Місце розташування сайту</button>
+                <button
+                    onclick="showContent('<strong>Способи підключення стилів:</strong> <br> Розбір різних способів підключення стилів в HTML.')">Способи
+                    підключення стилів</button>
+                <button
+                    onclick="showContent('<strong>Селектори тегу:</strong> <br> Приклади використання селекторів тегів у CSS.')">Селектори
+                    тегу</button>
+                <button
+                    onclick="showContent('<strong>Селектори класу:</strong> <br> Опис та приклади селекторів класу в CSS.')">Селектори
+                    класу</button>
+                <button
+                    onclick="showContent('<strong>Селектори ідентифікаторів:</strong> <br> Як працювати з селекторами ідентифікаторів в CSS.')">Селектори
+                    ідентифікаторів</button>
+                <button
+                    onclick="showContent('<strong>Інші селектори:</strong> <br> Огляд інших селекторів у CSS, включаючи псевдокласи.')">Інші
+                    селектори</button>
+                <button
+                    onclick="showContent('<strong>CSS: Шрифти, Текст, Таблиці, Фон, Контур:</strong> <br> Як працювати зі стилями для шрифтів, тексту, таблиць, фону та контуру в CSS.')">CSS:
+                    Шрифти Текст Таблиці Фон Контур</button>
+                <button
+                    onclick="showContent('<strong>Списки, CSS Просунуті техніки:</strong> <br> Робота зі списками в CSS та просунуті техніки.')">Списки
+                    CSS Просунуті</button>
+                <button
+                    onclick="showContent('<strong>Висновки до ЛР №2:</strong> <br> Висновки щодо виконання лабораторної роботи №2.')">ВИСНОВКИ
+                    до ЛР №2</button>
+            </div>
+
+            <div class="main-content">
+                <div id="output" class="output">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+<script>
+    const buttons = document.querySelectorAll('.sidebar button');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        });
+    });
+</script>
+</body>
+
+</html>
