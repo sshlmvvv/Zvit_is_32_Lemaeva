@@ -19,7 +19,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 100%;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
@@ -58,7 +59,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    max-width: 1200px;
+    max-width: 100%;
     width: 100%;
 }
 
@@ -85,9 +86,11 @@ nav ul li a:hover {
 
 .flex-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    max-width: 1200px;
+    max-width: 100%;
+    padding: 0 20px;
     margin: 20px auto;
     gap: 20px;
 }
@@ -133,15 +136,6 @@ nav ul li a:hover {
     color: #d6e9f8;
 }
 
-.announcement ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.announcement ul li {
-    margin: 10px 0;
-}
-
 .search input {
     width: 100%;
     padding: 10px;
@@ -159,24 +153,27 @@ nav ul li a:hover {
 }
 
 .main-content {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 20px auto;
     text-align: center;
+    padding: 0 20px;
 }
 
 .content-wrapper {
     display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap;
     gap: 20px;
+    align-items: flex-start;
 }
 
 .content-wrapper img {
-    width: 40%;
-    height: auto;
+    width: 100%;
+    max-width: 40%;
 }
 
 .content-wrapper p {
-    width: 60%;
+    width: 100%;
+    max-width: 60%;
     text-align: left;
 }
 
@@ -187,9 +184,11 @@ footer {
 
 .footer-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    max-width: 1200px;
+    max-width: 100%;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
@@ -207,4 +206,28 @@ footer a {
 
 footer a:hover {
     background-color: #2200ff;
+}
+
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
 }
