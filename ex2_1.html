@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фіксована таблична верстка</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 400px;
+            height: 600px;
+            border-collapse: collapse;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        td {
+            border: 1px solid black;
+        }
+
+        .header,
+        .footer {
+            height: 100px;
+            background-color: blue;
+        }
+
+        .sidebar-left {
+            width: 100px;
+            background-color: yellow;
+        }
+
+        .sidebar-right {
+            width: 50px;
+            background-color: white;
+        }
+
+        .content {
+            background-color: white;
+        }
+
+        .container {
+            margin: 20px;
+            padding: 10px;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Фіксована таблична верстка</h1>
+
+    <div class="container">
+        <table>
+            <tr>
+                <td rowspan="3" class="sidebar-left">2</td>
+                <td colspan="1" class="header">1</td>
+                <td rowspan="3" class="sidebar-right"></td>
+            </tr>
+            <tr>
+                <td class="content">4</td>
+            </tr>
+            <tr>
+                <td colspan="1" class="footer">3</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

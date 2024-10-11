@@ -1,8 +1,8 @@
 body {
-    font-family: 'Montserrat', 'Poiret One', 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-color: #a2e8ff;
 }
 
 h1,
@@ -29,17 +29,19 @@ h3 {
 }
 
 .container {
+    font-family: Montserrat;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 95%;
     margin: 0 auto;
     padding: 10px;
-    background-color: #fff;
+    background-color: #ffb7f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar {
+    font-family: Montserrat;
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -52,6 +54,7 @@ h3 {
 }
 
 .sidebar button {
+    font-family: Montserrat;
     background-color: #b9b9b9;
     border: none;
     padding: 15px;
@@ -73,6 +76,7 @@ h3 {
 }
 
 .output {
+    font-family: Montserrat;
     border: 1px solid #39006e;
     padding: 20px;
     min-height: 400px;
@@ -114,4 +118,28 @@ h3 {
 
 .header-container {
     position: relative;
+}
+
+.task {
+    font-family: Montserrat;
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    text-align: left;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.subtask {
+    font-family: Montserrat;
+    display: block;
+    width: 90%;
+    margin: 5px 20px;
+    padding: 10px;
+    text-align: left;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: white;
 }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гумова блокова верстка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex-grow: 1;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .block1,
+        .block3 {
+            width: 100%;
+            height: 10%;
+            background-color: rgb(76, 0, 255);
+            text-align: center;
+            color: rgb(0, 0, 0);
+            line-height: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .middle {
+            flex-grow: 1;
+            display: flex;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .block5,
+        .block2 {
+            width: 15%;
+            background-color: rgb(255, 234, 0);
+            text-align: center;
+            color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .block4 {
+            flex-grow: 1;
+            background-color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="block1">1</div>
+        <div class="middle">
+            <div class="block5">5</div>
+            <div class="block4">4</div>
+            <div class="block2">2</div>
+        </div>
+        <div class="block3">3</div>
+    </div>
+</body>
+
+</html>
