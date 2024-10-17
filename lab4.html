@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poiret+One&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet" />
+    <script>
+        function showContent(content) {
+            document.getElementById('output').innerHTML = content;
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+            <h2>З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ ТА ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ"</h2>
+            <h3>Студентки групи ІС-32 Лємаєвої Олександри</h3>
+            <img src="./images/DSC07095.JPG" alt="Фото студента" class="photo">
+        </div>
+    </header>
+
+    <main>
+        <div class="nav-buttons">
+            <a href="index.html">Лабораторна робота №1</a>
+            <a href="lab2.html">Лабораторна робота №2</a>
+            <a href="lab3.html">Лабораторна робота №3</a>
+            <a href="lab4.html">Лабораторна робота №4</a>
+            <a href="lab5.html">Лабораторна робота №5</a>
+            <a href="lab6.html">Лабораторна робота №6</a>
+            <a href="lab7.html">Лабораторна робота №7</a>
+            <a href="lab8.html">Лабораторна робота №8</a>
+            <a href="lab9.html">Лабораторна робота №9</a>
+        </div>
+
+        <div class="container">
+            <div class="sidebar">
+                <button class="task"
+                    onclick="showContent('<strong>Тема:</strong> <br> АДАПТИВНА ВЕРСТКА. МЕДІА-ЗАПИТИ. МЕТАТЕГ VIEWPORT. СТРАТЕГІЯ MOBILE FIRST.<br> '+
+                       ' <strong> Мета: </strong> <br> Адаптивна верстка. Медіа-запити. Медіа-типи. Медіа-функції.'+
+                       ' Метатег viewport. Інструменти розробника. Стратегія Mobile First. '+
+                       '<br><strong> Місце розташування лаби:</strong> <br>'+
+                       ' 1. Посилання на репозиторій звітного html документа:'+
+                       ' <a href=https://github.com/sshlmvvv/Zvit_is_32_Lemaeva>https://github.com/sshlmvvv/Zvit_is_32_Lemaeva</a> <br> '+
+                       '2. Посилання на репозиторій веб-застосунка: '+
+                       '<a href=https://github.com/sshlmvvv/Website_flowershop_is-32_Lemaeva>https://github.com/sshlmvvv/Website_flowershop_is-32_Lemaeva</a>'+
+                       '<br> 3. Посилання на живу сторінку звітного html документа: '+
+                       '<a href=https://sshlmvvv.github.io/Zvit_is_32_Lemaeva>https://sshlmvvv.github.io/Zvit_is_32_Lemaeva</a>'+
+                       '<br> 4. Посилання на живу сторінку веб-застосунка: '+
+                       '<a href=https://sshlmvvv.github.io/Website_flowershop_is-32_Lemaeva>https://sshlmvvv.github.io/Website_flowershop_is-32_Lemaeva</a>')">
+                    Тема Мета<br>Місце розташування сайту, звіту
+                </button>
+                <button class="task"
+                    onclick="showContent(
+                        '<img src=&quot;images/4.1.1.png&quot; style=&quot;width: 80%;&quot;> '+
+                        '<img src=&quot;images/4.1.2.png&quot; style=&quot;width: 80%;&quot;> '+
+                        '<img src=&quot;images/4.1.3.png&quot; style=&quot;width: 40%;&quot;> '+
+                        '<img src=&quot;images/4.1.4.png&quot; style=&quot;width: 40%;&quot;> '+
+                        '<img src=&quot;images/4.1.5.png&quot; style=&quot;width: 40%;&quot;> '+
+                        '<img src=&quot;images/4.1.6.png&quot; style=&quot;width: 40%;&quot;> ')">
+                    Мобільна версія
+                </button>
+                <button class="task" onclick="showContent(
+                        '<img src=&quot;images/4.2.1.png&quot; style=&quot;width: 80%;&quot;> '+
+                        '<img src=&quot;images/4.2.2.png&quot; style=&quot;width: 40%;&quot;> '+
+                        '<img src=&quot;images/4.2.3.png&quot; style=&quot;width: 40%;&quot;> '+
+                        '<img src=&quot;images/4.2.4.png&quot; style=&quot;width: 40%;&quot;> '+
+                        '<img src=&quot;images/4.2.5.png&quot; style=&quot;width: 40%;&quot;> '+
+                        '<img src=&quot;images/4.2.6.png&quot; style=&quot;width: 40%;&quot;> ')">
+                    Планшетна версія
+                </button>
+                <button class="task" onclick="showContent(
+                        '<img src=&quot;images/4.3.1.png&quot; style=&quot;width: 40%;&quot;> '+
+                        '<img src=&quot;images/4.3.2.png&quot; style=&quot;width: 70%;&quot;> '+
+                        '<img src=&quot;images/4.3.3.png&quot; style=&quot;width: 70%;&quot;> '+
+                        '<img src=&quot;images/4.3.4.png&quot; style=&quot;width: 70%;&quot;> '+
+                        '<img src=&quot;images/4.3.5.png&quot; style=&quot;width: 70%;&quot;> ')">
+                    Десктопна версія
+                </button>
+                <button class="task" onclick="showContent('Створення десктопної, планшетної та мобільної версії сайту'+
+                 ' передбачає адаптацію дизайну під різні розміри екранів. <br> <br>'+
+                 'Десктопна версія — це та, що використовується на комп’ютерах і ноутбуках, '+
+                 'де ми можемо розмістити більше елементів і використовувати більші шрифти. '+
+                 'Дизайн може бути складнішим, з кількома колонками та великими зображеннями.<br> '+
+                 'Планшетна версія має середній розмір екрану, тому ми адаптуємо сайт так, щоб все виглядало красиво.'+
+                 ' У цій версії ми можемо зменшити розміри шрифтів і зображень, але ще залишити деякі елементи в одному рядку.<br> '+
+                 'Наприклад, меню може бути вертикальним, щоб зекономити місце. <br> '+
+                 'Мобільна версія — це найменша, що відображається на смартфонах. '+
+                 'Тут важливо, щоб сайт був простим і зрозумілим, адже на маленькому екрані важко розглядати дрібні деталі.'+
+                 ' Ми об’єднуємо елементи, зменшуємо шрифти та робимо кнопки більшими для легшого натискання.'+
+                 ' Часто використовується вертикальне меню, а важливі елементи, такі як контакти та кошик, повинні бути завжди видимими.<br><br> '+
+                 'Основні принципи адаптації включають гнучкість, використання гнучких стилів,'+
+                 ' які підлаштовуються під різні розміри екранів, а також медіа-запити в CSS, '+
+                 'які дозволяють змінювати стиль в залежності від ширини екрану. <br>'+
+                 'Наприклад, для мобільних пристроїв шрифт може бути меншим, а для десктопів — більшим.<br><br>'+
+                 ' Завжди важливо думати про зручність користування, оскільки користувачі на мобільних '+
+                 'телефонах хочуть швидко знайти інформацію, тому найважливіші елементи розміщуються на видному місці.<br> '+
+                 'Таким чином, ми створюємо сайт, який буде зручним і красивим на всіх пристроях.')">
+                    Пояснення створення десктопної, планшетної та мобільної версії.
+                </button>
+                <button class="task"
+                    onclick="showContent('<strong> Висновки до ЛР №4:</strong> <br> '+
+                'У процесі виконання лабораторної роботи були здобуті практичні навички, що є важливими для розробки веб-сторінок.'+
+                ' Основні результати роботи: вивчено різні підходи до адаптивної верстки, зокрема медіа-запити,'+
+                ' які дозволяють налаштувати вигляд елементів на різних пристроях. Окрему увагу було приділено метатегу viewport,'+
+                ' який забезпечує правильну масштабованість сторінки на мобільних пристроях. Це сприяло кращому сприйняттю контенту.'+
+                'Крім того, освоєно використання медіа-типів та медіа-функцій, що дозволяє налаштовувати стилі в залежності '+
+                'від характеристик пристрою, таких як ширина екрану. Розглянуто інструменти розробника, які допомогли у тестуванні '+
+                'адаптивності макетів у реальному часі. Завдяки стратегії Mobile First, '+
+                'спочатку було створено базову версію сайту для мобільних пристроїв, що полегшило подальшу адаптацію для планшетів '+
+                'і десктопів. Це підтвердило важливість правильного підходу до розробки для сучасних користувачів, '+
+                'які все частіше використовують мобільні гаджети.')">
+                    ВИСНОВКИ
+                </button>
+            </div>
+
+            <div class="main-content">
+                <div id="output" class="output">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    <script>
+        const buttons = document.querySelectorAll('.sidebar button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
