@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>масиви 2.0 :)</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 650px;
+            background-color: #d6c5ff;
+        }
+        .form-container {
+            background-color: #c48eff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #5900ff;
+            font-size: 19px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #8c00ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #8548f6;
+        }
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1>ЗАВДАННЯ №4</h1>
+
+        <label for="arraySize">Введіть кількість елементів масиву:</label>
+        <input type="number" id="arraySize" placeholder="Наприклад, 50"><br><br>
+
+        <button onclick="generateAndProcessArray()">Згенерувати масив</button>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function generateRandomArray(size) {
+            const array = [];
+            for (let i = 0; i < size; i++) {
+                array.push(Math.floor(Math.random() * 100));  // генерація чисел від 0 до 99
+            }
+            return array;
+        }
+
+        function shiftArrayRight(array, value) {
+            array.unshift(value); // переносимо мінімальний елемент на початок
+        }
+
+        function selectionSortDescending(array) {
+            const length = array.length;
+            for (let i = 0; i < length - 1; i++) {
+                let maxIdx = i;
+                for (let j = i + 1; j < length; j++) {
+                    if (array[j] > array[maxIdx]) {
+                        maxIdx = j;
+                    }
+                }
+                if (maxIdx !== i) {
+                    let temp = array[i];
+                    array[i] = array[maxIdx];
+                    array[maxIdx] = temp;
+                }
+            }
+        }
+
+        function generateAndProcessArray() {
+            const size = document.getElementById("arraySize").value;
+            let array = generateRandomArray(size);
+            const minElement = Math.min(...array); // знаходимо мінімальний елемент
+            array.splice(array.indexOf(minElement), 1); // видаляємо мінімальний елемент з масиву
+            shiftArrayRight(array, minElement); // переміщаємо мінімальний елемент на початок
+
+            // Упорядковуємо масив за спаданням
+            const originalArray = [...array];
+            selectionSortDescending(array);
+
+            document.getElementById("message").innerHTML = `
+                Початковий масив: [${originalArray.join(', ')}]<br>
+                Масив після перенесення мінімального елементу: [${array.join(', ')}]<br>
+                Масив після сортування: [${array.join(', ')}]
+            `;
+        }
+    </script>
+
+</body>
+
+</html>

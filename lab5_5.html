@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спливаючі підказки</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 650px;
+            background-color: #d6c5ff;
+            color: #55036b;
+        }
+        .form-container {
+            background-color: #c48eff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #55036b;
+            font-size: 19px;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #ead3f5;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 150px;
+            background-color: #6800bed6;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            bottom: 111%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        #newTooltipForm {
+            margin-top: 20px;
+            background-color: #b26bff;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        input[type="submit"] {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #8c00ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        input[type="submit"]:hover {
+            background-color: #8548f6;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1>ЗАВДАННЯ №5</h1>
+        <div class="tooltip">Завтра
+            <span class="tooltiptext">Коли починається нове життя і обов'язково спортзал.</span>
+        </div>
+        <div class="tooltip">П'ятниця
+            <span class="tooltiptext">Офіційний день переїдання і планів на життя.</span>
+        </div>
+        <div class="tooltip">Кіт
+            <span class="tooltiptext">Головний у домі, навіть якщо ви думаєте інакше.</span>
+        </div>
+
+        <div id="newTooltipForm">
+            <h2>Додаємо нову підказку</h2>
+            <label for="newText">Назва:</label>
+            <input type="text" id="newText" placeholder="Введіть основну назву">
+            <br>
+            <label for="tooltipText">Текст підказки:</label>
+            <input type="text" id="tooltipText" placeholder="Введіть текст підказки">
+            <br>
+            <input type="submit" value="Додати підказку" onclick="addTooltip()">
+        </div>
+    </div>
+
+    <script>
+        function addTooltip() {
+            const newText = document.getElementById("newText").value;
+            const tooltipText = document.getElementById("tooltipText").value;
+
+            if (newText && tooltipText) {
+                // Створюємо новий елемент для тексту з підказкою
+                const tooltip = document.createElement("div");
+                tooltip.className = "tooltip";
+                tooltip.innerHTML = `${newText}<span class="tooltiptext">${tooltipText}</span>`;
+
+                // Додаємо нову підказку всередину форми перед кнопкою
+                const formContainer = document.getElementById("newTooltipForm");
+                formContainer.insertAdjacentElement("beforebegin", tooltip);
+
+                // Очищаємо поля вводу
+                document.getElementById("newText").value = '';
+                document.getElementById("tooltipText").value = '';
+            } else {
+                alert("Заповніть всі поля!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

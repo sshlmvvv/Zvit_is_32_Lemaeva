@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>масиви:)</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 650px;
+            background-color: #d6c5ff;
+        }
+        .form-container {
+            background-color: #c48eff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #5900ff;
+            font-size: 19px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #8c00ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #8548f6;
+        }
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 25px;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1>ЗАВДАННЯ №3</h1>
+
+        <label for="firstArray">Перший масив:</label>
+        <input type="text" id="firstArray" placeholder="1, 2, 3...">
+
+        <label for="secondArray">Другий масив:</label>
+        <input type="text" id="secondArray" placeholder="4, 5, 6...">
+
+        <label for="maxLength">Максимальна довжина масиву:</label>
+        <input type="number" id="maxLength" placeholder="наприклад, 6" min="1">
+
+        <button onclick="showResult()">Переглянути новий масив</button>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function makeArray(firstArray, secondArray, maxLength) {
+            const newArray = firstArray.concat(secondArray);
+
+            if (newArray.length > maxLength) {
+                return newArray.slice(0, maxLength);
+            } else {
+                return newArray;
+            }
+        }
+
+        function showResult() {
+            const firstArray = document.getElementById("firstArray").value.split(',').map(Number);
+            const secondArray = document.getElementById("secondArray").value.split(',').map(Number);
+            const maxLength = Number(document.getElementById("maxLength").value);
+
+            if (firstArray.some(isNaN) || secondArray.some(isNaN) || maxLength < 1) {
+                document.getElementById("message").innerText = "Будь ласка, введіть правильні значення.";
+                return;
+            }
+
+            const result = makeArray(firstArray, secondArray, maxLength);
+            document.getElementById("message").innerText = `[${result.join(', ')}]`;
+        }
+    </script>
+
+</body>
+
+</html>
