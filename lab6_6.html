@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:)</title>
+</head>
+
+<body>
+    <a href="../lab6.html">lab6</a>
+
+    <script>
+        const medicines = [
+                { name: "Noshpa", price: 170 },
+                { name: "Analgin", price: 55 },
+                { name: "Quanil", price: 310 },
+                { name: "Alphacholine", price: 390 },
+            ];
+
+            const Discount = (medicines) => {
+                return medicines.map((medicine, index) => {
+                    const discountedPrice = medicine.price > 300
+                        ? medicine.price * 0.7 // 30%
+                        : medicine.price;
+
+                    return {
+                        id: index + 1, // унікальний айді
+                        name: medicine.name,
+                        oldPrice: medicine.price,
+                        newPrice: parseFloat(discountedPrice.toFixed(2)), // 2 знаки після коми
+                    };
+                });
+            };
+
+            const updatedMedicines = Discount(medicines);
+            console.log(updatedMedicines);
+
+    </script>
+</body>
+
+</html>

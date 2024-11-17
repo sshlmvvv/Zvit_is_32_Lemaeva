@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:)</title>
+</head>
+
+<body>
+    <a href="../lab6.html">lab6</a>
+
+    <script>
+        function checkBrackets(str) {
+                const stack = [];
+                const brackets = {
+                    "(": ")",
+                    "{": "}",
+                    "[": "]"
+                };
+
+                for (const char of str) {
+                    if (brackets[char]) {
+                        stack.push(char);
+                    } else if (Object.values(brackets).includes(char)) {
+                        const lastOpen = stack.pop();
+                        if (brackets[lastOpen] !== char) {
+                            return false;
+                        }
+                    }
+                }
+
+                return stack.length === 0;
+            }
+
+            console.log(checkBrackets("someFn()"));
+            console.log(checkBrackets("someFn({[(777)]})"));
+            console.log(checkBrackets("someFn({[[]]})"));
+            console.log(checkBrackets("someFn({[}])"));
+            console.log(checkBrackets("someFn("));
+            console.log(checkBrackets("someFn{}}"));
+            console.log(checkBrackets("someFn[[[[[[(1111)]]]]]]"));
+
+    </script>
+</body>
+
+</html>

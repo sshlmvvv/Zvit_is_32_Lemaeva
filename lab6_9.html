@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:)</title>
+</head>
+
+<body>
+    <a href="../lab6.html">lab6</a>
+
+    <script>
+        const tweets = [
+                { id: "000", likes: 5, tags: ["js", "nodejs"] },
+                { id: "001", likes: 2, tags: ["html", "css"] },
+                { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+                { id: "003", likes: 8, tags: ["css", "react"] },
+                { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+            ];
+
+            const countTags = (tweets) => {
+                return tweets
+                    .flatMap((tweet) => tweet.tags) // всі масиви тегів у один
+                    .reduce((acc, tag) => {
+                        acc[tag] = (acc[tag] || 0) + 1; // збільшуємо лічильник для кожного тегу
+                        return acc;
+                    }, {});
+            };
+
+            const result = countTags(tweets);
+            console.log(result);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:)</title>
+</head>
+
+<body>
+    <a href="../lab6.html">lab6</a>
+
+    <script>
+        const products = [
+            { id: 1, name: "Букет троянд", price: 5000 },
+            { id: 2, name: "Капкейки (6 шт.)", price: 300 },
+            { id: 3, name: "Макаруни (12 шт.)", price: 400 },
+            { id: 4, name: "Чізкейк", price: 180 },
+            { id: 5, name: "Орхідея", price: 800 },
+        ];
+
+        function getProductDetails(productId, successCallback, errorCallback) {
+            const product = products.find(item => item.id === productId);
+
+            if (product) {
+                successCallback(product);
+            } else {
+                errorCallback(`Товару із ID ${productId} не знайдено.`);
+            }
+        }
+
+        // ID 3
+        getProductDetails(
+            3,
+            product => {
+                console.log("Деталі товару:", product);
+            },
+            errorMessage => {
+                console.error("Помилка:", errorMessage);
+            }
+        );
+
+        // ID 5
+        getProductDetails(
+            5,
+            product => {
+                console.log("Деталі товару:", product);
+            },
+            errorMessage => {
+                console.error("Помилка:", errorMessage);
+            }
+        );
+
+        // ID 1
+        getProductDetails(
+            1,
+            product => {
+                console.log("Деталі товару:", product);
+            },
+            errorMessage => {
+                console.error("Помилка:", errorMessage);
+            }
+        );
+
+        // Невідомий ID 
+        getProductDetails(
+            100,
+            product => {
+                console.log("Деталі товару:", product);
+            },
+            errorMessage => {
+                console.error("Помилка:", errorMessage);
+            }
+        );
+    </script>
+</body>
+
+</html>
