@@ -1,0 +1,208 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #193c41;
+}
+
+.container7_2 {
+    text-align: center;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #2a91ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #002852;
+}
+
+.container7_4 {
+    text-align: center;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#square {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: #aab0fc;
+    border: 2px dashed #16006e;
+}
+
+button#decreaseButton {
+    background-color: #6f4eff;
+    color: #ffffff;
+}
+
+button#increaseButton {
+    background-color: #6f4eff;
+    color: white;
+}
+
+button#decreaseButton:hover {
+    background-color: #002852;
+}
+
+button#increaseButton:hover {
+    background-color: #002852;
+}
+
+ul {
+    list-style-type: disc;
+    margin: 20px auto;
+    padding: 0;
+    width: fit-content;
+    text-align: left;
+}
+
+li {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #444;
+}
+
+.login-form {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    max-width: 100%;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a91ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #002852;
+}
+
+.widget {
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.color {
+    color: #000000;
+}
+
+.change-color {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.change-color:hover {
+    background-color: #ffc1dd;
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+#controls input {
+    padding: 5px;
+    font-size: 16px;
+    width: 150px;
+    margin-right: 10px;
+}
+
+#controls button {
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: #2a91ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#controls button:hover {
+    background-color: #002852;
+}
+
+#boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+#boxes div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

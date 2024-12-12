@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗАВДАННЯ 6</title>
+    <link rel="stylesheet" href="style7.css">
+</head>
+
+<body>
+    <div class="container7_4">
+        <h1>ЗАВДАННЯ 6</h1>
+        <ul id="numberList">
+            <li>2</li>
+            <li>4</li>
+            <li>6</li>
+            <li>8</li>
+            <li>10</li>
+            <li>11</li>
+            <li>15</li>
+        </ul>
+        <button id="doubleButton">ПОДВОЇТИ</button>
+    </div>
+
+    <script>
+        const doubleButton = document.getElementById('doubleButton');
+        const listItems = document.querySelectorAll('#numberList li');
+
+        doubleButton.addEventListener('click', () => {
+            listItems.forEach(item => {
+                item.textContent = parseInt(item.textContent) * 2;
+            });
+        });
+    </script>
+</body>
+
+</html>

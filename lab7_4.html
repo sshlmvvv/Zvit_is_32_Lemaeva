@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗАВДАННЯ 4</title>
+    <link rel="stylesheet" href="style7.css">
+</head>
+
+<body>
+    <div class="container7_4">
+        <h1>ЗАВДАННЯ 4</h1>
+        <div id="square"></div>
+        <button id="decreaseButton">ЗМЕНШИТИ</button>
+        <button id="increaseButton">ЗБІЛЬШИТИ</button>
+    </div>
+
+    <script>
+        const square = document.getElementById('square');
+        const decreaseButton = document.getElementById('decreaseButton');
+        const increaseButton = document.getElementById('increaseButton');
+
+        let size = 100;
+
+        decreaseButton.addEventListener('click', () => {
+            size = Math.max(15, size - 15); 
+            square.style.width = `${size}px`;
+            square.style.height = `${size}px`;
+        });
+
+        increaseButton.addEventListener('click', () => {
+            size += 15;
+            square.style.width = `${size}px`;
+            square.style.height = `${size}px`;
+        });
+    </script>
+</body>
+
+</html>

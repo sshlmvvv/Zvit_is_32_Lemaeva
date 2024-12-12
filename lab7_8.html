@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style7.css">
+    <title>ЗАВДАННЯ 8</title>
+</head>
+
+<body>
+
+    <form class="login-form">
+        <label>
+            Email
+            <input type="email" name="email" />
+        </label>
+        <label>
+            Password
+            <input type="password" name="password" />
+        </label>
+        <button type="submit">Log in</button>
+    </form>
+
+    <script>
+        const form = document.querySelector('.login-form');
+
+        // обробка submit
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // без перезавантаження
+
+            const email = form.elements.email.value.trim(); // email
+            const password = form.elements.password.value.trim(); // password
+
+            // перевірка чи всі поля заповнені
+            if (!email || !password) {
+                alert('All form fields must be filled in');
+                return;
+            }
+
+            // об'єкт з введеними даними
+            const formData = {
+                email: email,
+                password: password,
+            };
+
+            console.log(formData);
+
+            form.reset();
+        });
+    </script>
+
+</body>
+
+</html>
